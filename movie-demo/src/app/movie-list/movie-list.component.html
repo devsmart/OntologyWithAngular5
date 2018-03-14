@@ -1,0 +1,21 @@
+<div class="movie-outer">
+  <div class="list">
+    <ul class="movie-list" *ngIf="movies">
+      <li *ngFor="let m of movies">
+        <div class="list-outer" itemscope itemtype="http://schema.org/Movie">
+          <img src="{{getImagePath(m.poster_path)}}" alt="movie poster" class="poster img-thumbnail float-left" />
+          <div class="content">
+            <div itemprop="name" class="name text-primary" [innerHtml]="m.title"></div>
+            <span class="text-success">
+              <strong>overview</strong>
+            </span>
+            <p itemprop="description" class="desc text-warning" [innerHtml]="m.overview" title="{{m.overview}}"></p>
+            <button class="btn btn-success pull-right" (click)="onSelect(m)">Details >></button>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </li>
+    </ul>
+  </div>
+
+</div>

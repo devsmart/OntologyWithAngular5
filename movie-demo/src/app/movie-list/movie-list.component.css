@@ -1,0 +1,40 @@
+.movie-list {
+  margin: 0 5px;
+  padding: 0;
+}
+
+.movie-list li {
+  list-style: none;
+  margin: 5px;
+}
+
+.poster {
+  max-width: 100px;
+}
+
+.list {
+  height: 755px;
+  overflow-y: auto;
+}
+
+.content {
+  margin-left: 110px;
+}
+
+.content .name {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.content .desc {
+  max-height: 40px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.content button.selected {
+  background-color: #2b532b;
+  border-color: #b6b9b6;
+}
